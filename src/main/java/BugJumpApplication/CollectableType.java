@@ -32,3 +32,38 @@ HEART,STAR,CHEESE,HANDHELD,MELEE,NONE;
 	}
 	
 }
+
+//this version adds a constructor in order to better access images from this enum, and also changes the switch case variable to a static variable
+/*
+public enum CollectableType {
+    HEART("/Images/heart.png"),
+    STAR("/Images/star.png"),
+    CHEESE("/Images/cheese.png"),
+    HANDHELD("/Images/handheld.png"),
+    MELEE("/Images/melee.png"),
+    NONE("n/a");
+
+    private final String imagePath;
+
+    CollectableType(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public static CollectableType getType(int num) {
+        if (num < 0 || num >= values().length) {
+            return NONE;
+        }
+        return values()[num];
+    }
+
+    @Override
+    public String toString() {
+        return name().toLowerCase() + " (Image: " + imagePath + ")";
+    }
+}
+
+*/

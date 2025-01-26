@@ -12,6 +12,7 @@ public class Bullet extends GraphicsProgram{
 	private int theta;
 	private boolean isFriendly;
 	private boolean isMelee;
+
 	
 	public Bullet(int x, int y, int vel, int theta, boolean isFriendly) {
 		this.xAxis = x;
