@@ -1,26 +1,51 @@
 package BugJumpApplication;
 
 public enum EnemyType {
-	FLOWER,SPIDER,WORM,BEETLE, NONE;
+	FLOWER("/Images/sunflower.png"),
+	SPIDER("/Images/spider.png"),
+	WORM("/Images/rightWorm.png"),
+	BEETLE("/Images/rightBeetle.png"),
+	NONE("n/a");
 	
-	public String toString() {
-		switch(this) {
-			case FLOWER: return "/Images/sunflower.png";
-			case SPIDER: return "/Images/spider.png";
-			case WORM: return "/Images/rightWorm.png";
-			case BEETLE: return "/Images/rightBeetle.png";
-		}
-		return "n/a";
-	}
+	private final String imagePath;
 	
-	public EnemyType getType(int num) {
-		switch(num) {
-			case 0: return EnemyType.FLOWER;
-			case 1: return EnemyType.SPIDER;
-			case 2: return EnemyType.WORM;
-			case 3: return EnemyType.BEETLE;
-		}
-		return null;
-		
-	}
+	EnemyType(String imagePath) {
+        this.imagePath = imagePath;
+    }
+	
+	public String getImagePath() {
+        return imagePath;
+    }
+	
+	public static EnemyType getType(int num) {
+        if (num < 0 || num >= values().length) {
+            return NONE;
+        }
+        return values()[num];
+    }
 }
+/*
+HEART("/Images/heart.png"),
+    STAR("/Images/star.png"),
+    CHEESE("/Images/cheese.png"),
+    HANDHELD("/Images/handheld.png"),
+    MELEE("/Images/melee.png"),
+    NONE("n/a");
+	
+	private final String imagePath;
+
+    CollectableType(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+    
+    public static CollectableType getType(int num) {
+        if (num < 0 || num >= values().length) {
+            return NONE;
+        }
+        return values()[num];
+    }
+*/

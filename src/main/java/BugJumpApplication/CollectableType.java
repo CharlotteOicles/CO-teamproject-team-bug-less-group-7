@@ -25,9 +25,4 @@ public enum CollectableType {
         return values()[num];
     }
 	
-    @Override
-    public String toString() {
-        return name().toLowerCase() + " (Image: " + imagePath + ")";
-    }
-	
 }

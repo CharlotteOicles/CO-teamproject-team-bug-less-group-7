@@ -44,7 +44,7 @@ public class FileReader{
 			Enemy enemy;
 			String[] content = scanner.nextLine().trim().split("-");			
 			enemy = new Enemy(Integer.parseInt(content[0]), Integer.parseInt(content[1]), EnemyType.NONE.getType(Integer.parseInt(content[2])));
-			enemiesMap.put(new GImage(enemy.getEnemyType().toString(), enemy.getX(), enemy.getY()), enemy);
+			enemiesMap.put(new GImage(enemy.getEnemyType().getImagePath(), enemy.getX(), enemy.getY()), enemy);
 			
 		}		
 		scanner.nextLine();
