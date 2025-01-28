@@ -19,5 +19,7 @@ public enum WeaponType {
 		
 		}
 		return null;
+	}
+}
 
-}}
+//Must use switch case for weapon, as it's lumped into the collectible reader in the file reader, mapping the values with integers confuses it.
