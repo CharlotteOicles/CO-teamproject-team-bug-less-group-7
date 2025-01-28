@@ -11,13 +11,10 @@ If you're wondering why this commit is so recent and why I'm speaking in the pas
 
 Declare Enum
 	Constructor that pairs collectible types to their respective image paths while declaring the types
-	
 	ImagePath variable declaration
+ 	Method to assign image path to paired type
+  	Image path getter
+   	Static variable that chooses type
+    	ToString method that returns type and image path
 
-  Method to assign image path to paired type
-
-  Image path getter
-    
-  Static variable that chooses type
-
-  ToString method that returns type and image path
+I've finished the refactoring and the game works on my machine now. To demonstrate that the new code works, you just have to play the game, so run MainApplication.java and play a few levels. If it functions it'll run smoothly, if it doesn't the game just won't display because the file reader won't be able to figure out the image retrieval.
