@@ -74,7 +74,7 @@ public class FileReader{
 			GImage image;
 			String[] content = scanner.nextLine().trim().split("-");			
 			collectable = new Collectable(Integer.parseInt(content[0]), Integer.parseInt(content[1]), CollectableType.NONE.getType(Integer.parseInt(content[2])));
-			image = new GImage(collectable.getCType().toString(), collectable.getX(), collectable.getY());
+			image = new GImage(collectable.getCType().getImagePath(), collectable.getX(), collectable.getY());
 			collectablesMap.put(image, collectable);
 		}	
 		
